@@ -1,1 +1,6 @@
-test git quick start demo
+Git configration
+
+git config --global user.name "username"
+git config --global user.email "useremail"
+git config --global --list
+test git
