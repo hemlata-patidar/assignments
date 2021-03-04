@@ -3,4 +3,11 @@ Git configration
 git config --global user.name "username"
 git config --global user.email "useremail"
 git config --global --list
-test git
+
+git status
+
+git add filename
+git status
+git commit -m "comment like adding this file"
+git status
+git push origin (branch name like "main")
