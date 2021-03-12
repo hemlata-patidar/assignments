@@ -1,0 +1,198 @@
+body {
+  font-family: sans-serif;
+}
+
+.notice {
+  color: aqua;
+}
+
+.blog {
+  color: grey;
+}
+
+#form-sec {
+  background-color: #ffffff; /* set background color */
+  padding: 30px;
+}
+
+#form-sec input[type="text"], #form-sec textarea {
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+header {
+  background: antiquewhite;
+  padding: 2px;
+  position: sticky;
+  top: 0px;
+}
+
+header h4 {
+  margin:  auto;
+  text-align: center;
+  width: 20%;
+}
+
+header figure img, header figure a {
+  display: block;
+  margin: auto;
+  width: 20%;
+}
+
+h2 {
+  text-align: center;
+}
+
+nav {
+  background: #f1f1f1;
+  text-align: center;
+}
+
+nav a{
+  color: brown;
+}
+
+nav a:visited {
+  color: black;
+}
+
+nav a:hover {
+  background: blue;
+  color: #ffffff;
+}
+
+nav a:active {
+  color: green;
+}
+
+.iframe {
+  float: left;
+  text-align: center;
+  width: 50%;
+}
+
+.iframe-div:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+iframe {
+  border: 1px solid red;
+}
+
+.chat-icon {
+  background: #6969e2;
+  border: 1px solid #f1ebeb;
+  border-radius: 50%;
+  bottom: 2px;
+  box-shadow: 0px 1px 5px 6px #c1c1c1;
+  color: #ffffff;
+  display: inline-block;
+  padding: 56px 12px;
+  position: fixed;
+  right: 2px;
+ }
+
+ .contain {
+  border: 1px solid;
+  height: 250px;
+  position: relative;
+}
+
+.position-div2 {
+  left: 29px;
+  position: relative;
+  top: 20px;
+}
+
+section#image img {
+  opacity: 0.3;
+}
+
+section#image img:hover {
+  opacity: 1;
+}
+
+.contain > div {
+  border: 1px solid red;
+  float: left;
+  height: 200px;
+  margin: 6px;
+  width: 20%;
+}
+
+.position-div3 {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+
+.select-div > p {
+  color: red;
+}
+
+.select-div ~ p {
+  color: yellow;
+}
+
+.select-div + p {
+  color: green;
+}
+
+.select-div {
+  background-image: url("../img/hero/h1_hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+}
+
+section#canvas {
+  background-image: linear-gradient(to right, red,orange,yellow,rgba(255,0,0,1));
+  padding: 20px 0px;
+}
+
+.position-div1 {
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+}
+
+.position-div1:hover {
+  width: 200px;
+  /* transform: rotate(45deg); */
+}
+
+#image button, #form-sec input[type="submit"] {
+  background: blue;
+  border: 1px solid blue;
+  border-radius: 5px;
+  color: #ffffff;
+  display: block;
+  margin: auto;
+  padding: 10px 25px;
+}
+
+canvas {
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-name: animate;
+  animation-timing-function: ease;
+  border: 5px double blue !important;
+  text-align: center;
+  /* position: relative; */
+  }
+
+@keyframes animate {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:20px;}
+  75%  {background-color:green; left:0px; top:20px;}
+  100% {background-color:red; left:0px; top:0px;}
+}

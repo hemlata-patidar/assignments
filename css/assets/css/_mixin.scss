@@ -1,0 +1,31 @@
+@mixin link-property ($color, $display, $padding) {
+    color: $color;
+    display: $display;
+    padding: $padding;
+    text-decoration: none;
+  }
+  
+  @mixin hover-property {
+    cursor: pointer;
+    color: $red-color;
+  }
+  
+  @mixin clr-padding ($clr, $padding) {
+    color: $clr;
+    padding: $padding;
+  }
+  
+  @mixin bg-position ($bgcolor, $border, $radius, $position) {
+    background-color: $bgcolor;
+    border: $border;
+    border-radius: $radius;
+    position: $position;
+  }
+  
+  @mixin position-prop ($position, $top, $left, $right, $bottom) {
+    position: $position;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+  }
