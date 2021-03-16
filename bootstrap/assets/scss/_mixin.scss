@@ -1,0 +1,26 @@
+@mixin button-prop ($bg, $radius, $col, $padd) {
+  background-color: $bg;
+  border-radius: $radius;
+  color: $col;
+  padding: $padd;
+}
+
+@mixin after-prop ($left) {
+  background-color: $bg-color;
+  content: '';
+  height: 3px;
+  left: $left;
+  position: absolute;
+  top: 70px;
+  width: 65px;
+}
+
+@mixin image-prop($img) {
+  background-attachment: fixed;
+  background-image: $img;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+

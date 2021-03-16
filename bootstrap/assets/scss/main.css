@@ -1,0 +1,441 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.template-bethany {
+  background-attachment: fixed;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/hero-bg.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.template-bethany .my-navbar {
+  background-color: #fff;
+}
+
+.template-bethany .logo-name a {
+  background-color: #439a71;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.navbar {
+  border-radius: 0;
+  margin-top: 15px;
+}
+
+.navbar a {
+  color: #36343a;
+}
+
+.navbar a:hover {
+  color: #439a71;
+}
+
+.navbar li {
+  padding: 0 12px;
+}
+
+nav li .navbar-btn {
+  background-color: #439a71;
+  border-radius: 20px;
+  color: #fff;
+  padding: 6px 18px;
+}
+
+.heading-header {
+  color: #fff;
+  padding: 16rem 0;
+}
+
+.heading-header p {
+  font-size: 16px;
+}
+
+.heading-header h1 {
+  font-size: 5rem;
+}
+
+.heading-header button {
+  background-color: transparent;
+  border-radius: 20px;
+  color: #fff;
+  padding: 8px 28px;
+  border: 2px solid #fff;
+  margin-top: 25px;
+}
+
+.heading-header button:hover {
+  background-color: #439a71;
+  border-color: #439a71;
+  color: #fff;
+}
+
+.client-logo {
+  background-color: #f6f6f7;
+}
+
+.client-logo img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  margin: 15px 0;
+  padding: 10px;
+  width: 100px;
+}
+
+.client-logo img:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.eum-para {
+  margin: 5rem 0;
+}
+
+.eum-para .eum-content p {
+  font-size: 2.8rem;
+}
+
+.eum-para .eum-content h1 {
+  font-size: 5rem;
+  margin-top: 0;
+}
+
+.eum-para .laboris-content {
+  font-size: 2rem;
+}
+
+.counters {
+  background-color: #439a71;
+  border-radius: 0;
+  color: #fff;
+  padding: 4rem 0;
+  margin: 6rem 0;
+}
+
+.counters .text-center h1 {
+  margin: 0;
+}
+
+.corpois-content .col-md-2 {
+  border: 1px solid #f7f4f4;
+  -webkit-box-shadow: 2px 2px 8px #f7f4f4;
+          box-shadow: 2px 2px 8px #f7f4f4;
+  margin: 95px 12px;
+  padding: 45px 35px;
+}
+
+.corpois-content .glyphicon {
+  color: #439a71;
+  font-size: 30px;
+}
+
+.corpois-content h2 {
+  font-size: 22px;
+  margin: 30px 0;
+}
+
+.corpois-content p {
+  font-size: 16px;
+}
+
+.bg-contain button {
+  background-color: #58ab83;
+  border-radius: 25px;
+  color: #fff;
+  padding: 10px 35px;
+  border: 1px solid #439a71;
+}
+
+.bg-contain button:hover {
+  background-color: #fff;
+  color: #439a71;
+}
+
+.bg-contain p {
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+.action {
+  background-attachment: fixed;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/cta-bg.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-size: 18px;
+  margin: 50px 0 0;
+  padding: 60px 10px;
+}
+
+.action button {
+  background-color: transparent;
+  border-radius: 20px;
+  color: #fff;
+  padding: 8px 28px;
+  border: 2px solid #fff;
+  margin-top: 25px;
+}
+
+.services {
+  background-color: #f6f6f7;
+  padding: 70px 0;
+}
+
+.services h1::after {
+  background-color: #439a71;
+  content: '';
+  height: 3px;
+  left: 16px;
+  position: absolute;
+  top: 70px;
+  width: 65px;
+}
+
+.glyphi-text {
+  background-color: #fff;
+  margin: 15px 5px;
+  padding: 50px;
+}
+
+.glyphi-text:hover {
+  -webkit-box-shadow: 0 3px 5px #e4e0e0;
+          box-shadow: 0 3px 5px #e4e0e0;
+}
+
+.glyphi-text .glyphicon {
+  border: 1px solid #439a71;
+  border-radius: 50%;
+  color: #439a71;
+  font-size: 18px;
+  padding: 25px;
+}
+
+.glyphi-text .glyphicon:hover {
+  background-color: #439a71;
+  color: #fff;
+}
+
+.portfolio {
+  position: relative;
+}
+
+.portfolio p {
+  font-size: 18px;
+  padding: 25px 0;
+}
+
+.portfolio h1::after {
+  background-color: #439a71;
+  content: '';
+  height: 3px;
+  left: 135px;
+  position: absolute;
+  top: 70px;
+  width: 65px;
+}
+
+.portfolio .tab-content {
+  padding: 40px 0;
+}
+
+.portfolio .thumbnail {
+  border: 0;
+}
+
+.nav-pills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-pills .active a {
+  background-color: #439a71 !important;
+  color: #fff;
+}
+
+.nav-pills a {
+  color: #000;
+}
+
+.service-para {
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.testimonial {
+  position: relative;
+}
+
+.testimonial p {
+  font-size: 18px;
+  padding: 25px 0;
+}
+
+.testimonial h1::after {
+  background-color: #439a71;
+  content: '';
+  height: 3px;
+  left: 15px;
+  position: absolute;
+  top: 70px;
+  width: 65px;
+}
+
+.cara-quote {
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 12px #c1c1c1;
+          box-shadow: 0 2px 12px #c1c1c1;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 37px;
+}
+
+.cara-quote div {
+  margin: 20px 0;
+}
+
+.cara-quote h4 {
+  color: #b7b7b7;
+  font-size: 14px;
+}
+
+.cara-quote q::before,
+.cara-quote q::after {
+  color: #439a71;
+  font-size: 50px;
+}
+
+.lower-foot {
+  background-color: #f1f0f2;
+  padding: 25px 0;
+}
+
+.lower-foot .pull-right .fa {
+  background-color: #439a71;
+  border-radius: 50%;
+  color: #fff;
+  padding: 10px 12px;
+  font-size: 18px;
+}
+
+.lower-foot .pull-right .fa:hover {
+  background-color: #379267;
+}
+
+.lower-foot .pull-left {
+  font-size: 16px;
+}
+
+.foot-contain {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.foot-contain a {
+  color: #000;
+}
+
+.foot-form input {
+  border-radius: 20px;
+  padding: 20px;
+  width: 250px;
+}
+
+.foot-form button {
+  background-color: #439a71;
+  border-radius: 20px;
+  color: #fff;
+  padding: 10px 20px;
+  left: -45px;
+  position: relative;
+}
+
+.contact-from {
+  padding: 40px 0;
+}
+
+.contact-from textarea {
+  width: 100%;
+}
+
+.contact {
+  -webkit-box-shadow: 0 1px 5px #c1c1c1;
+          box-shadow: 0 1px 5px #c1c1c1;
+  padding: 50px;
+}
+
+.contact button {
+  background-color: #439a71;
+  border-radius: 18px;
+  color: #fff;
+  padding: 9px 20px;
+  font-size: 16px;
+}
+
+.icon-bar {
+  background: #fff;
+  font-size: 20px;
+}
+
+.my-carousel img {
+  max-width: 80px;
+}
+
+.my-carousel .carousel-indicators {
+  bottom: -60px;
+}
+
+.my-carousel .carousel-indicators .active {
+  background-color: #439a71;
+}
+
+.container-fluid.bathny-contain {
+  padding: 0;
+}
+
+.tooltip-contain,
+.caraousle-contain {
+  margin: 40px 0;
+}
+
+.col-md-4.bg-contain {
+  background-color: #439a71;
+  color: #fff;
+  margin-right: 8px;
+  padding: 20px 25px;
+}
+
+.testimonial,
+.foot-contain {
+  background-color: #f6f6f7;
+  padding: 70px 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .template-bethany .logo-name a {
+    font-size: 20px;
+  }
+  nav li .navbar-btn {
+    padding: 6px 10px;
+  }
+  .nav > li > a {
+    padding: 15px 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .foot-form button {
+    bottom: 57px;
+    left: 200px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
