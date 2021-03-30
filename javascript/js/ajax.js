@@ -1,7 +1,6 @@
-function showData (para, getState) {
+function showData(para, getState) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
-
     if (this.readyState == 4 && this.status == 200) {
       var arr = JSON.parse(this.responseText);
       var caseSeries = arr['cases_time_series'];
