@@ -1,0 +1,38 @@
+<table class="statwise-data sortable" id="stateTable">
+  <thead id="thead">
+    <tr>
+      <th>State/UT</th>
+      <th>Confirmed</th>
+      <!-- <th>Active</th> -->
+      <th>Recovered</th>
+      <th>Deceased</th>
+      <th>Tested</th>
+      <th>Vaccine Doses Administered</th>
+      <th>Other</th>
+      <th>Active Ratio</th>
+      <th>Recovery Ratio</th>
+      <th>Case Fatality Ratio</th>
+      <th>Test Positivity Ratio</th>
+      <th>Population</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+      {{stateData}}
+      <tr>
+        <td class="cell"><a href="state.html?name={{stateCode}}">{{stateName}}</a></td>
+        <td class="cell"><div class="new-con">(latestConfirm)</div>confirmed</td>
+        <td class="cell">totalCases.active</td>
+        <td class="cell"> <div class="new-des">{{latestDec}}</div>{{recovered}}</td>
+        <td class="cell"> <div class="new-recv">{{latestRecv}}</div>{{deceased}}</td>
+        <td class="cell"><div class="new-test">{{latestTest}}</div>{{tested}}</td>
+        <td class="cell"><div class="new-vaccine">{{latestVacci}}</div>{{vaccinated}}</td>
+        <td class="cell">{{others}}</td>
+        <td class="cell"> - </td>
+        <td class="cell"> - </td>
+        <td class="cell"> - </td>
+        <td class="cell"> - </td>
+        <td class="cell">{{population}}</td>
+      </tr>
+      {{/stateData}}
+    </tbody>
+</table>

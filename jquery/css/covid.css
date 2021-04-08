@@ -1,0 +1,442 @@
+* {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.country-name,
+.district-name {
+  color: #ff073a;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.spred-trend {
+  margin-left: 15px;
+}
+
+.spred-trend .spread {
+  color: #6c757d;
+}
+
+.spred-trend .state-selection {
+  padding: 25px 0;
+}
+
+.spred-trend .state-selection .state-name {
+  background: #1e1e30;
+  background-position: calc(100% - 13px) 50%, calc(100% - 8px) 50%;
+  background-repeat: no-repeat;
+  background-size: 5px 5px,5px 5px;
+  border-color: rgba(148, 148, 148, 0.1);
+}
+
+.covid-detail {
+  background-color: #161726;
+  padding: 5rem 0;
+}
+
+.confirmed {
+  color: #ff073a;
+  height: 180px;
+  padding-top: 10px;
+}
+
+.confirmed h5,
+.confirmed h4 {
+  font-weight: 800;
+}
+
+.confirmed:hover {
+  background-color: rgba(255, 7, 58, 0.12);
+  border-radius: 5px;
+}
+
+.total-tested {
+  text-align: right;
+}
+
+.total-tested h5 {
+  color: rgba(150, 115, 185, 0.73);
+}
+
+.is-confirm {
+  background-color: rgba(255, 7, 58, 0.12);
+  border-radius: 5px;
+}
+
+.all-cases {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.all-cases span {
+  font-size: 12px;
+}
+
+.confirm-add,
+.new-con {
+  color: #ff073a;
+}
+
+.active-add {
+  color: #007bff;
+}
+
+.active-case {
+  color: #007bff;
+  height: 180px;
+  padding-top: 10px;
+}
+
+.active-case h5 {
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.active-case h4 {
+  font-weight: 800;
+}
+
+.active-case:hover {
+  background-color: rgba(0, 123, 255, 0.06);
+  border-radius: 5px;
+}
+
+.is-active {
+  background-color: rgba(0, 123, 255, 0.06);
+  border-radius: 5px;
+}
+
+.is-recover {
+  background-color: rgba(40, 167, 69, 0.12);
+  border-radius: 5px;
+}
+
+.recover-add,
+.new-recv {
+  color: #28a745;
+}
+
+.recover {
+  color: #28a745;
+  height: 180px;
+  padding-top: 10px;
+}
+
+.recover h5 {
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.recover h4 {
+  font-weight: 800;
+}
+
+.recover:hover {
+  background-color: rgba(40, 167, 69, 0.12);
+  border-radius: 5px;
+}
+
+.is-death {
+  background-color: rgba(108, 117, 125, 0.06);
+  border-radius: 5px;
+}
+
+.death-add,
+.last-updated {
+  color: #6c757d;
+}
+
+.deaths {
+  color: #6c757d;
+  height: 180px;
+  padding-top: 10px;
+}
+
+.deaths h5 {
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.deaths h4 {
+  font-weight: 800;
+}
+
+.deaths:hover {
+  background-color: rgba(108, 117, 125, 0.06);
+  border-radius: 5px;
+}
+
+.state-table {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.state-table .statwise-data {
+  border: 1px solid #000;
+  color: #6c757d;
+}
+
+.state-table .statwise-data th {
+  background-color: #1e1e30;
+  border: 4px solid #161726;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 900;
+  padding: 1.25rem .5rem .75rem;
+  text-align: center;
+}
+
+.state-table .statwise-data .cell {
+  border: 4px solid #161726;
+  padding: 5px;
+}
+
+.state-table .statwise-data .cell:hover {
+  background-color: #1e1e30;
+}
+
+.state-table .statwise-data td:first-child {
+  background-color: #1e1e30;
+  font-weight: 800;
+}
+
+tr:nth-child(odd) td {
+  background-color: #1e1e30;
+}
+
+td a {
+  color: #6c757d;
+}
+
+td a:hover {
+  color: #6c757d;
+}
+
+.total-tested,
+.new-test {
+  color: #9673b9;
+}
+
+.new-vaccine {
+  color: #db5581;
+}
+
+.confirmed-graph,
+.recovered-graph,
+.deceased-graph,
+.tested-graph,
+.vaccinated-graph {
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+.col-md-6.graph-section {
+  padding-left: 60px;
+}
+
+.level-vaccinated {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+  background: rgba(219, 85, 129, 0.12);
+  border-radius: 5px;
+  color: #db5581;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 2.5rem 0;
+  padding: .5rem;
+}
+
+.level-vaccinated h5 {
+  width: 100%;
+}
+
+.delta-confirm .fa-heart,
+.delta-recvr .fa-heart,
+.delta-dth .fa-heart,
+.delta-test .fa-heart {
+  font-size: 9px;
+}
+
+.district {
+  color: #6c757d;
+  font-size: 18px;
+  line-height: 4rem;
+}
+
+.covid-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0;
+  margin-top: 80px;
+  width: 100%;
+}
+
+.covid-footer h5 {
+  color: #6c757d;
+  font-weight: 600;
+  margin: 0 0 2rem;
+}
+
+.covid-footer a {
+  background: rgba(0, 123, 255, 0.06);
+  color: #007bff;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+  word-wrap: break-word;
+}
+
+.pills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.pills button {
+  background-color: rgba(255, 193, 7, 0.12);
+  border: 2px solid rgba(255, 193, 7, 0.12);
+  border-bottom: 0;
+  border-top: 0;
+  color: #fd7e14;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 0;
+  outline: none;
+  padding: 10px 15px;
+  text-align: center;
+  -webkit-transition: background .25s ease-in-out;
+  transition: background .25s ease-in-out;
+}
+
+.pills button .selected {
+  background: rgba(255, 193, 7, 0.31);
+}
+
+.pills button:last-of-type {
+  border: 0;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.pills button:first-of-type {
+  border: 0;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.focus-state,
+.all-cases {
+  font-weight: 800;
+}
+
+.state-meta {
+  -ms-grid-row-align: center;
+      align-self: center;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  width: calc(100% - 3rem);
+}
+
+.state-meta .meta-item {
+  border-radius: 5px;
+  min-height: 6rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.state-meta .confirmed {
+  background: rgba(255, 7, 58, 0.12);
+}
+
+.state-meta .confirmed h5 {
+  margin-bottom: 15px;
+}
+
+.state-meta .active {
+  background: rgba(0, 123, 255, 0.06);
+  color: rgba(0, 123, 255, 0.6);
+}
+
+.state-meta .recovery {
+  background: rgba(40, 167, 69, 0.12);
+  color: #28a745;
+}
+
+.state-meta .mortality {
+  background: rgba(108, 117, 125, 0.06);
+  color: #6c757d;
+}
+
+.state-meta .gr {
+  background: rgba(182, 133, 77, 0.06);
+  color: #b6854d;
+}
+
+.state-meta .tpm {
+  background: rgba(32, 26, 162, 0.12);
+  color: #9673b9;
+}
+
+.state-meta h3 {
+  font-size: 18px;
+}
+
+.state-meta h1 {
+  font-size: 24px;
+}
+
+.state-focus {
+  margin-top: 35px;
+}
+
+.total-confirm h4,
+.total-active h4,
+.total-recover h4,
+.total-deceased h4,
+.total-tested h4 {
+  font-size: 23px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 767px) {
+  .col-md-6.graph-section {
+    padding-left: 20px;
+  }
+  .total-tested {
+    width: 100%;
+  }
+  .total-tested {
+    text-align: left;
+  }
+}
+/*# sourceMappingURL=covid.css.map */

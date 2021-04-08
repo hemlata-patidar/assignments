@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jquery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <div id="hidden">bouble click for hide</div>
+  <div class="hidden">hidden on mouse enter</div>
+  <div id="oneEvent">oneclick event</div>
+  <div id="oneEvent">oneclick event</div>
+  <p>Paragraph onclick button hide</p>
+  <p>Paragraph onclick button hide</p>
+  <button>Click me to hide</button><br>
+  <a href="https://api.jquery.com/category/events/document-loading/">prevent default action</a>
+  <div id="bindEvent"> change color on bindevent</div>
+  <span>Propogate events</span>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Subject</th>
+    </tr>
+    <tr>
+      <td>Hemlata</td>
+      <td>Jquery</td>
+    </tr>
+  </table>
+  <a href="" class="offsite">on click events difference</a>
+  <button class="removeHandl">unwrap, wrap</button>
+
+  <h2>Greetings</h2>
+  <div class="container">
+    <div class="inner">Hello</div>
+    <div class="inner">Goodbye</div>
+  </div>
+  <p id="offset">offset DOM</p>
+  <p id="position">position DOM</p>
+  <ul class="level-1">
+    <li class="item-i">I</li>
+    <li class="item-ii">II
+      <ul class="level-2">
+        <li class="item-a">A</li>
+        <li class="item-b">B
+          <ul class="level-3">
+            <li class="item-1">1</li>
+            <li class="item-2">2</li>
+            <li class="item-3">3</li>
+          </ul>
+        </li>
+        <li class="item-c">C</li>
+      </ul>
+    </li>
+    <li class="item-iii">III</li>
+  </ul>
+
+  <ul class="list">
+    <li>list1</li>
+    <li>list2</li>
+  </ul>
+
+  <ul class="first">
+    <li class="foo">list item 1</li>
+    <li>list item 2</li>
+    <li class="bar">list item 3</li>
+  </ul>
+  <ul class="second">
+    <li class="foo">list item 1</li>
+    <li>list item 2</li>
+    <li class="bar">list item 3</li>
+  </ul>
+
+  <p id="param"></p>
+  <p id="results"></p>
+
+  <form action="#" id="post-form">
+    <input type="text" name="name" value="hemlata" id="name">
+    <input type="email" name="email" value="h@gmail.com" id="email">
+    <input type="password" name="password" value="`34455nbdv" id="password">
+    <input type="submit" name="g" value="Submit" id="submitForm">
+
+  </form>
+<br><br>
+  <form id="FORM" method="post">
+    <input type="button" value="submit" name="Submit" id="Submit">
+  </form>
+  <p class="result"></p>
+<script>
+  $(document).ready(function() {
+    $("button").click(function( event ) {
+      console.log(event)
+      $("p").hide();
+    });
+
+    $("#oneEvent").one("click", function() {
+      $(this).hide();
+    });
+    $("p").on("click", function() {
+      $(this).hide();
+     // $( "button" ).trigger( "click" );
+    });
+
+    $("#hidden").dblclick(function() {
+      $(this).hide();
+    }); 
+
+    $(".hidden").mouseenter(function() {
+      $(this).hide();
+    });
+    // $(".hidden").mouseleave(function() {
+    //   $(this).show();
+    // });
+
+    $( "#bindEvent" ).bind({
+      click: function() {
+        $(this).css("color", "#cccccc");
+      },
+      mouseenter: function() {
+        $(this).css("color", "#000000");
+      }
+    });
+
+    // $( "#bindEvent" ).unbind( "click", function() {
+    //   $( "div" ).off( "click", "**" );
+    // });
+
+    $("a").click(function(event){
+      event.preventDefault();
+    });
+
+    $( "table" ).delegate( "td", "click", function() {
+      $( this ).toggleClass( "selected" );
+    });
+
+    // $( "table" ).on( "click", "td", function() {
+    //   $( this ).toggleClass( "selected" );
+    // });
+
+    $( "body" ).delegate( "span", "click", function() {
+      $( this ).after( "<span>Another paragraph!</span>" );
+    });
+
+    // $( "a.offsite" ).live( "click", function() {
+    //   alert( "live!" ); // jQuery 1.3+
+    // });
+    $( document ).delegate( "a.offsite", "click", function() {
+      alert( "delegate!" ); // jQuery 1.4.3+
+    });
+    $( document ).on( "click", "a.offsite", function() {
+      alert( "on!" );  // jQuery 1.7+
+    });
+
+    $("p").off("click").on("click", function() {
+      $(this).css('color','red')
+    });
+
+    $( "button" ).click(function() {
+      if ( $( "p" ).parent().is( "div" ) ) {
+        $( "p" ).unwrap();
+      } else {
+        $( "p" ).wrap( "<div></div>" );
+      }
+    });
+
+    $( ".inner" ).wrapAll( "<div class='new' />");
+    $( ".inner" ).wrapInner( "<div class='new'></div>");
+    $( ".inner" ).append( "<p>Test</p>" );
+    $( "h2" ).appendTo( ".inner" );
+    $( ".inner" ).prepend( "<p>Test</p>" );
+    $( ".inner" ).after( "<p>after</p>" );
+    $( ".inner" ).before( "<p>before</p>" );
+
+    var p = $( "#offset" );
+    var offset = p.offset();
+    p.html( "left: " + offset.left + ", top: " + offset.top );
+
+    var pstn = $( "#position" );
+    var position = pstn.position();
+    $( "#position" ).text( "left: " + position.left + ", top: " + position.top );
+    $( "ul.level-2" ).children().css( "background-color", "red" );
+
+    $( "li.item-a" )
+  .closest( "ul" )
+  .css( "background-color", "yellow" );
+
+  $( ".list li" ).each(function( index ) {
+    console.log( index + ": " + $( this ).text() );
+  });
+
+  $( "ul.first" ).find( ".foo" ).css( "background-color", "red" )
+  .end().find( ".bar" ).css( "background-color", "green" );
+
+  $( "li" ).eq( 2 ).css( "background-color", "blue" );
+  $( "li" ).even().css( "background-color", "pink" );
+  $( window ).resize(function() {
+    $( "body" ).prepend( "<div class='resize'>" + $( window ).width() + "</div>" );
+  });
+  
+  var params = { name: 'hemlata', lastname: 'patidar' };
+  var str = jQuery.param( params );
+  $( "#param" ).text( str );
+
+  $.get( "https://api.covid19india.org/state_district_wise.json", function( data ) {
+    //$( ".result" ).html( data );
+   // alert( "Load was performed." );
+  });
+
+  var str = $( "form" ).serialize();
+  $( "#results" ).text( str );
+
+  $( "form" ).submit(function( event ) {
+    console.log( $( this ).serializeArray() );
+    event.preventDefault();
+  });
+
+  $("#Submit").click(function () {
+    $.ajax({
+      beforeSend: function(){
+        console.log('beforesend')
+      },
+      type: "GET",
+      url: "https://api.covid19india.org/state_district_wise.json",
+      dataType: 'json',
+      success: function (response) {
+        alert("AJAX call Successfully");
+        console.log(response)
+      },
+    });
+ 
+  })
+})
+</script>
+</body>
+</html>
