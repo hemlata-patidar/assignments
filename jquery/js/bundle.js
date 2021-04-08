@@ -128,7 +128,7 @@ var countryStateObj = {
     })
   },
 
-  getStateChangeData: function() {
+  getStateChangeData: function(url) {
     $('#state-name').change(function() {
       var selectState = $(this).val();
       $.ajax({
@@ -232,7 +232,7 @@ var countryStateObj = {
       }
     })
   },
-  getDistrictChangeData: function() {
+  getDistrictChangeData: function(url) {
     $('#state-name').change(function() {
       var selectState = $(this).val();
       $.ajax({

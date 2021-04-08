@@ -11,7 +11,7 @@ function onInit() {
   stname = statesName[urlParam('name')];
   countryStateObj.getDistrictBaseData(stname, url);
   countryStateObj.getDistrictSmallChart(urlParam);
-  countryStateObj.getDistrictChangeData();
+  countryStateObj.getDistrictChangeData(url);
 
   $(".ninty-days").click({url: url, days: "90"}, ajaxCallGraphState);
   $(".thirty-days").click({url: url, days: "30"}, ajaxCallGraphState);
