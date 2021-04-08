@@ -38,7 +38,7 @@ var countryStateObj = {
         $(".total-active").append("<h6 class='delta-recvr'>&nbsp;</h6><h4 class='activeAll'>" + addCommas(overallStatus['active']) + "</h4><div id='active-graph'></div>");
         $(".total-recover").append("<h6 class='delta-recvr'>" + (deltaRcvr) + "</h6><h4 class='recoverAll'>" + addCommas(overallStatus['recovered']) + "</h4><div id='recv-graph'></div>");
         $(".total-deceased").append("<h6 class='delta-dth'>" + (deltaDth) + "</h6><h4 class='deathAll'>" + addCommas(overallStatus['deaths']) + "</h4><div id='decease-graph'></div>");
-        $(".total-tested").append("<h4 class='testedAll'>" + addCommas(totalTestedSample) + "</h4>");
+        $(".total-tested").append("<h4 class='testedAll'>" +  (totalTestedSample !== undefined) ? (addCommas(totalTestedSample)) : ('')  + "</h4>");
         $(".total-tested").append("<h5 class='sampleAll'>" + moment(sampleDate).format('ll') + "</h5><h5>per source</h5>");
         if ($('.confirmAll').text() !== '') {
           $('.confirmed').addClass('is-confirm');
