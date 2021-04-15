@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Able Pro</title>
+  <link rel="stylesheet" href="./assets/scss/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+</head>
+<body>
+  <div class="able-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="header-section">
+          <div class="col-md-6 col-xs-6">
+            <div class="head-logo">
+              <h1>Able <sup>pro</sup></h1>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mylinks">
+              <div class="head-icons">
+                <div class="col-md-5"></div>
+              </div>
+              <div class="profile-icon">
+                <div class="col-md-4 col-sm-3">
+                  <div class="profile dropdown">
+                    <div class="dropdown-toggle" data-toggle="dropdown">
+                      <img src="./assets/images/profile.png" alt="DP" class="display-profile profile-img"><span class="user-Name">John Doe</span><span class="caret"></span>
+                    </div>
+                    <!-- <button class="btn btn-default dropdown-toggle" type="button" id="menu1" > -->
+                    <ul class="dropdown-menu">
+                      <li class="log-outsession"><a class="dropdown-item" href="#" class="log-out">Log Out</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="javascript:void(0);" class="iconhead" onclick="menuResponsive()">
+              <i class="fa fa-bars"></i>
+            </a>
+            <!-- <span class="close-icon">&#10005;</span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="able-body">
+    <div class="container-fluid">
+      <h2>Profile Social</h2>
+      <div class="cover-image"></div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="sidebar-options">
+            <div class="profile-detail text-center">
+              <div class="friends-sidebar">
+                <img class="display-profile" src="./assets/images/dummy-boy.png" alt="dummy">
+                <input type="file" class="upload-profile " id="uploadProfile"/> 
+                <h4 class="user-name-profile">Josephin Villa</h4>
+                <h5 class="user-occupation">Software Engineer</h5>
+              </div>
+              <div class="row follow-append"></div>
+            </div>
+            <div class="follow">
+              <h3>WHO TO FOLLOW</h3>
+              <div class="follow-imgtext"></div>
+            </div>
+            <div class="friends">
+              <h3>FRIENDS</h3>
+              <div class="frnds-img">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="list-tabs-menu"> 
+            <ul class="nav nav-tabs text-center list-menu">
+                <li class="active"><a data-toggle="tab" href="#timeline" class="active">Timeline</a></li>
+                <li><a data-toggle="tab" href="#about">About</a></li>
+                <li><a data-toggle="tab" href="#photos">Photos</a></li>
+                <li><a data-toggle="tab" href="#friends">Friends</a></li>
+            </ul>
+            <div class="tab-content">
+              <div id="timeline" class="tab-pane fade in active">
+                <div class="time-line">
+                  <button class="btn btn-default pull-right add-timeline" data-toggle="modal" data-target="#addPost" id="add-timeline"> + Add Post</button>
+                </div>
+              </div>
+              <div id="about" class="tab-pane fade">
+                <div class="about-page">
+                  <div class="row about-head">
+                    <div class="col-md-9">
+                      <h4>BASIC INFORMATION</h4>
+                    </div>
+                    <div class="col-md-3">
+                      <button class="btn pull-right" data-toggle="modal" data-target="#basicSignupForm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                  <div class="bio-info">
+                    <table>
+                      <tr>
+                        <th>Full Name</th>
+                        <td id="full-name">Josephine Villa</td>
+                      </tr>
+                      <tr>
+                        <th>Gendar</th>
+                        <td id="about-gendar">Female</td>
+                      </tr>
+                      <tr>
+                        <th>Birth Date</th>
+                        <td id="birth-day">October 25th, 1990</td>
+                      </tr>
+                      <tr>
+                        <th>Martail Status</th>
+                        <td id="marry">Singal</td>
+                      </tr>
+                      <tr>
+                        <th>Location</th>
+                        <td id="loca">New York, USA</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="about-work">
+                  <div class="row about-head">
+                    <div class="col-md-9">
+                      <h4>Work</h4>
+                    </div>
+                    <div class="col-md-3">
+                      <button class="btn pull-right" data-toggle="modal" data-target="#WorkSignupForm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                  <div class="bio-info">
+                    <table>
+                      <tr>
+                        <th>Occupation</th>
+                        <td id="occup">Developer</td>
+                      </tr>
+                      <tr>
+                        <th>Skills</th>
+                        <td id="skll">C#, Javascript, Angular</td>
+                      </tr>
+                      <tr>
+                        <th>Jobs</th>
+                        <td id="jobs">Phoenixcoded</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div id="photos" class="tab-pane fade">
+                <div class="photo">
+                  <img src="./assets/images/photo1.png">
+                  <img src="./assets/images/photo2.png">
+                  <img src="./assets/images/photo3.png">
+                  <img src="./assets/images/photo4.png">
+                </div>
+              </div>
+              <div id="friends" class="tab-pane fade"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="addPost" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+      </div>
+      <div class="modal fade" id="basicSignupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+      </div>
+      <div class="modal fade" id="WorkSignupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true"></div>
+    </div>
+  </div>
+  <script src="./assets/js/variable.js"></script>
+  <script src="./assets/js/common.js"></script>
+  <script src="./assets/js/bundle.js"></script>
+  <script src="./assets/js/mustache.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/about.js"></script>
+  <script src="./assets/js/timeline.js"></script>
+  <script src="./assets/js/friends.js"></script>
+</body>
+</html>
