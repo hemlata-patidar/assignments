@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+    <title>Media Query</title>
+    <style>
+      li {
+        /* float: left; */
+        display: inline;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+      }
+
+      li a {
+        display: inline-block;
+        padding: 14px 16px;
+        text-align: center;
+        text-decoration: none;
+      }
+      .music-event {
+        display: flex;
+      }
+      .music-event img {
+        width: 33%;
+      }
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 767px) {
+        .music-event {display: block;}
+        .music-event img {
+          width: 100%;
+        }
+        li {
+          display: block;
+        }
+        li a{
+          color: red;
+          padding: 7px 16px;
+        }
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        .music-event {display: flex; flex-wrap: wrap;}
+        .music-event img {
+          width: 50%;
+        }
+        li a{
+          color: black;
+        }
+
+      }
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        .music-event {display: flex;}
+        .music-event img {
+          width: 33%;
+        }
+        li a{
+          color: grey;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <a href="./index.html" target="_blank"><img src="./assets/img/logo.png" alt="logo image" width="100px" height="auto"></a>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#iframe">Iframe</a></li>
+        <li><a href="#tables">Table</a></li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#canvas">Canvas</a></li>
+        <li><a href="#entities">Html Entites</a></li>
+        <li><a href="#textformat">Text Formatting</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <section class="music-event">
+          <img src="./assets/img/news/whatNews1.jpg" alt="music-event">
+          <img src="./assets/img/news/whatNews2.jpg" alt="music-event">
+          <img src="./assets/img/news/whatNews3.jpg" alt="music-event">
+        </section>
+      </article>
+    </main>
+    <footer>
+      <p style="text-align:center;margin-bottom:60px">&copy; Basic 2021</p>
+      <div class="chat-icon">
+        Connect with us
+      </div>
+    </footer>
+  </body>
+</html>

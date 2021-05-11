@@ -1,0 +1,111 @@
+@import 'mixin';
+@import 'var';
+
+// .calendar {
+//   height: 400px;
+//   margin: auto;
+//   padding: 20px 0;
+//   width: 500px;
+// }
+
+.calendar {
+  margin-top: 20px;
+}
+
+.weekdays {
+  display: flex;
+  width: 100%;
+
+  div {
+    padding: 20px 0;
+    text-align: center;
+    width: 14.28%;
+  }
+
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    margin: 3px;
+    padding: 12px 0;
+    text-align: center;
+    width: 12.28%;
+
+    &:hover {
+      background-color: $bg-color;
+    }
+  }
+}
+
+.today-date {
+  background-color: $blue-color;
+  border-radius: 50%;
+  color: $white-color;
+
+  &:hover {
+    color: $blue-color;
+    font-weight: 600;
+  }
+}
+
+.prev,
+.next {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 10px;
+  padding: 2px 5px;
+
+  &:hover {
+    background: $bg-color;
+    cursor: pointer;
+  }
+}
+
+.prev-date {
+  color: $bg-color;
+
+  &:hover {
+    color: $grey-color;
+  }
+}
+
+.weekday-event {
+  display: flex;
+  margin-top: 20px;
+
+  div {
+    text-align: center;
+    width: 20%;
+  }
+}
+
+.day-event {
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    border: 1px solid $grey-color;
+    height: 120px;
+    padding: 45px 0 0;
+    text-align: center;
+    width: 14%;
+  }
+
+  p {
+    background: $blue-color;
+    color: $white-color;
+    margin: 2px;
+  }
+}
+
+.today-dt {
+  background-color: $bg-color;
+}
+
+.month {
+  font-size: 20px;
+  font-weight: 800;
+}

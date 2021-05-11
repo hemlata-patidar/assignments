@@ -1,0 +1,31 @@
+<img src="./assets/images/follow1.png" class="border-img">
+<div class="post-line">
+  <div class="row line-box">
+    <div class="col-md-9">
+      <h4>{{ firstName }} posted on your timeline</h4>
+      <h5>50 minutes ago</h5>
+    </div>
+    <div class="col-md-3">
+      <i class="fa fa-ellipsis-v pull-right clr-gry" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="post-back"></div>
+  <div class="post-content">
+    <h4>{{ firstName }} posted on your timeline</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iste necessitatibus saepe beatae. Perferendis eum sequi, magnam corrupti corporis necessitatibus exercitationem molestiae</p>
+  </div>
+  <div class="post-like">
+    <div class="like">
+      <i class="fa fa-heart" aria-hidden="true"></i>
+      <span>Like (20)</span>
+    </div>
+    <div class="comment">
+      <i class="fa fa-commenting-o" aria-hidden="true"></i>
+      <span>Comments (25)</span>
+    </div>
+    <div class="share">
+      <i class="fa fa-share-alt" aria-hidden="true"></i>
+      <span>Share (10)</span>
+    </div>
+  </div>
+</div>

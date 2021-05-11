@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="./css/calendar.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body onload="displayCalendar()"> 
+    <!-- <div id="calendar"></div> -->
+    <div class="container">
+      <div class="calendar">
+        <div class="months text-center">
+          <div class="row">
+            <div class="col-md-2">
+              <span id="month" class="month"></span>
+            </div>
+            <div class="col-md-2">
+              <span class="">
+                <span class="prev" onclick="moveMonth('prev')">&#60;</span>
+                <span class="next" onclick="moveMonth('next')">&#62;</span>
+              </span>
+            </div>
+            <div class="col-sm-3 col-md-2">
+              <select class="form-control" name="month" id="monthSelect" onchange = "selectMonth()" onfocus='this.size=5;' onblur='this.size=1;'>
+              </select>
+            </div>
+            <div class="col-sm-3 col-md-2">
+              <select class="form-control" onfocus='this.size=6;' onblur='this.size=1;' name="year" id="year" onchange="selectYear()">
+              </select>
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-2">
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="eventModal" role="dialog">
+          <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Event</h4>
+              </div>
+              <div class="modal-body">
+                <input type="text" id="datevalue" value="" class="form-control" style="display: none;">
+                <input type="text" name="event" id="event" class="form-control" placeholder="Add title">
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" onclick="saveEvent()">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="weekdays"></div>
+            <div class="days"></div>
+          </div>
+          <div class="col-md-8">
+            <div class="weekday-event"></div>
+            <div class="day-event"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/calender-new.js"></script>
+  </body>                   
+</html>

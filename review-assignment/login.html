@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./assets/scss/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="login-box">
+          <h2 class="text-center">Able<sup>Pro</sup></h2>
+          <form action="" class="log-in-form" method="post">
+            <div class="form-group">
+              <input type="text" class="form-control email" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control password" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+            <span class="error"></span>
+            <div class="checkbox">
+              <label><input type="checkbox" name="remember"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default submit">Log In</button>
+            <div class="create-account text-center">
+              <a href="" id="createAccount" onclick="return false;">&plus; Create New Account</a>
+            </div>
+          </form>
+        </div>
+        <div class="sign-up">
+          <h2 class="text-center">Able<sup>Pro</sup></h2>
+          <form action="" class="sign-up-form" method="post">
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="text" class="form-control first-name" id="firstName" placeholder="First name" name="firstName">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control last-name" id="lastName" placeholder="Last name" name="lastName">
+              </div>
+            </div>
+            <div class="form-inline">
+              <div class="form-group">
+                <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="Female">Female
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="Male">Male
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="gender" id="other" value="Other">Other
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control sign-email" id="sign-email" placeholder="Enter email" name="signEmail">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control sign-password" id="signpwd" placeholder=" Enter password" name="signPwd">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control confirm-password" id="cnfrmpwd" placeholder="Enter confirm password" name="cnfrmPwd">
+            </div>
+            <div class="form-group">
+              <input type="date" class="form-control dob" id="dob" placeholder="Enter DOB" name="dob">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control martail-status" id="martail-status" placeholder="Enter martail-status" name="martailStatus">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control location" id="location" placeholder="Enter location" name="location">
+            </div>
+            <div class="form-group">
+              <select class="occupation" id="occupation" name="occupation">
+                <option value="">Select Occupation</option>
+                <option value="developer">Developer</option>
+                <option value="QA">QA</option>
+                <option value="designer">Designer</option>
+                <option value="musician">Musician</option>
+              </select>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input skills" name="skills" id="skillC"  value="c#"> C#
+              </label>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="skills" id="skillAngular"  value="angular"> Angular
+              </label>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="skills" id="jsSkill" value="javascript"> Javascript
+              </label>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control job" id="job" placeholder="Enter job" name="job">
+            </div>
+            <button type="submit" class="btn btn-default submit">Sign Up</button>
+            <div class="create-account text-center">
+              <a href="#" onclick="return false;" id="loginAccount">Log In</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <script src="./assets/js/variable.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/bundle.js"></script>
+    <script src="./assets/js/validation.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </div>
+</body>
+</html>

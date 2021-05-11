@@ -1,0 +1,407 @@
+@import 'mixin';
+@import 'var';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.template-bethany {
+  @include image-prop((linear-gradient(to bottom, $rgb, $rgb), url('../img/hero-bg.jpg')));
+
+  .my-navbar {
+    background-color: $white;
+  }
+
+  .logo-name a {
+    background-color: $bg-color;
+    color: $white;
+    font-size: 28px;
+    font-weight: 700;
+  }
+}
+
+.navbar {
+  border-radius: 0;
+  margin-top: 15px;
+
+  a {
+    color: $color;
+
+    &:hover {
+      color: $bg-color;
+    }
+  }
+
+  li {
+    padding: 0 12px;
+  }
+}
+
+nav li .navbar-btn {
+  @include button-prop ($bg-color, 20px, $white, 6px 18px);
+}
+
+.heading-header {
+  color: $white;
+  padding: 16rem 0;
+
+  p {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  button {
+    @include button-prop (transparent, 20px, $white, 8px 28px);
+    border: 2px solid $white;
+    margin-top: 25px;
+
+    &:hover {
+      background-color: $bg-color;
+      border-color: $bg-color;
+      color: $white;
+    }
+  }
+}
+
+.client-logo {
+  background-color: $light-color;
+
+  img {
+    filter: grayscale(1);
+    margin: 15px 0;
+    padding: 10px;
+    width: 100px;
+
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+.eum-para {
+  margin: 5rem 0;
+
+  .eum-content p {
+    font-size: 2.8rem;
+  }
+
+  .eum-content  h1 {
+    font-size: 5rem;
+    margin-top: 0;
+  }
+
+  .laboris-content {
+    font-size: 2rem;
+  }
+}
+
+.counters {
+  @include button-prop ($bg-color, 0, $white, 4rem 0);
+  margin: 6rem 0;
+
+  .text-center h1 {
+    margin: 0;
+  }
+}
+
+.corpois-content {
+  .col-md-2 {
+    border: 1px solid $grey-light;
+    box-shadow: 2px 2px 8px $grey-light;
+    margin: 95px 12px;
+    padding: 45px 35px;
+  }
+
+  .glyphicon {
+    color: $bg-color;
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin: 30px 0;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.bg-contain {
+  button {
+    @include button-prop ($btn-color, 25px, $white, 10px 35px);
+    border: 1px solid $bg-color;
+
+    &:hover {
+      background-color: $white;
+      color: $bg-color;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    margin: 30px 0;
+  }
+}
+
+.action {
+  @include image-prop((linear-gradient(to bottom, $rgb, $rgb), url('../img/cta-bg.jpg')));
+  color: $white;
+  font-size: 18px;
+  margin: 50px 0 0;
+  padding: 60px 10px;
+
+  button {
+    @include button-prop (transparent, 20px, $white, 8px 28px);
+    border: 2px solid $white;
+    margin-top: 25px;
+  }
+}
+
+.services {
+  background-color: $light-color;
+  padding: 70px 0;
+
+  h1::after {
+    background-color: $bg-color;
+    content: '';
+    height: 3px;
+    left: 16px;
+    position: absolute;
+    top: 70px;
+    width: 65px;
+  }
+}
+
+.glyphi-text {
+  background-color: $white;
+  margin: 15px 5px;
+  padding: 50px;
+
+  &:hover {
+    box-shadow: 0 3px 5px $clr;
+  }
+
+  .glyphicon {
+    border: 1px solid $bg-color;
+    border-radius: 50%;
+    color: $bg-color;
+    font-size: 18px;
+    padding: 25px;
+
+    &:hover {
+      background-color: $bg-color;
+      color: $white;
+    }
+  }
+}
+
+.portfolio {
+  position: relative;
+
+  p {
+    font-size: 18px;
+    padding: 25px 0;
+  }
+
+  h1::after {
+    @include after-prop (135px);
+  }
+
+  .tab-content {
+    padding: 40px 0;
+  }
+
+  .thumbnail {
+    border: 0;
+  }
+}
+
+.nav-pills {
+  display: flex;
+  justify-content: center;
+
+  .active a {
+    background-color: $bg-color !important;
+    color: $white;
+  }
+
+  a {
+    color: $blck-color;
+  }
+}
+
+.service-para {
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.testimonial {
+  position: relative;
+
+  p {
+    font-size: 18px;
+    padding: 25px 0;
+  }
+
+  h1::after {
+    @include after-prop (15px);
+  }
+}
+
+.cara-quote {
+  background-color: $white;
+  box-shadow: 0 2px 12px $grey;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 37px;
+
+  div {
+    margin: 20px 0;
+  }
+
+  h4 {
+    color: $clr-grey;
+    font-size: 14px;
+  }
+
+  q::before,
+  q::after {
+    color: $bg-color;
+    font-size: 50px;
+  }
+
+}
+
+.lower-foot {
+  background-color: $green;
+  padding: 25px 0;
+
+  .pull-right .fa {
+    @include button-prop ($bg-color, 50%, $white, 10px 12px);
+    font-size: 18px;
+
+    &:hover {
+      background-color: $bg-hover;
+    }
+
+  }
+
+  .pull-left {
+    font-size: 16px;
+  }
+
+}
+
+.foot-contain {
+  font-size: 15px;
+  line-height: 30px;
+
+  a {
+    color: $blck-color;
+  }
+}
+
+.foot-form {
+  input {
+    border-radius: 20px;
+    padding: 20px;
+    width: 250px;
+  }
+
+  button {
+    @include button-prop ($bg-color, 20px, $white, 10px 20px);
+    left: -45px;
+    position: relative;
+  }
+
+}
+
+.contact-from {
+  padding: 40px 0;
+
+  textarea {
+    width: 100%;
+  }
+}
+
+.contact {
+  box-shadow: 0 1px 5px $grey;
+  padding: 50px;
+
+  button {
+    @include button-prop ($bg-color, 18px, $white, 9px 20px);
+    font-size: 16px;
+  }
+}
+
+.icon-bar {
+  background: $white;
+  font-size: 20px;
+}
+
+
+.my-carousel {
+
+  img {
+    max-width: 80px;
+  }
+
+  .carousel-indicators {
+    bottom: -60px;
+
+    .active {
+      background-color: $bg-color;
+    }
+  }
+}
+
+.container-fluid.bathny-contain {
+  padding: 0;
+}
+
+.tooltip-contain,
+.caraousle-contain {
+  margin: 40px 0;
+}
+
+.col-md-4.bg-contain {
+  background-color: $bg-color;
+  color: $white;
+  margin-right: 8px;
+  padding: 20px 25px;
+}
+
+.testimonial,
+.foot-contain {
+  background-color: $light-color;
+  padding: 70px 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .template-bethany .logo-name a {
+    font-size: 20px;
+  }
+
+  nav li .navbar-btn {
+    padding: 6px 10px;
+  }
+
+  .nav>li>a {
+    padding: 15px 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .foot-form button {
+    bottom: 57px;
+    left: 200px;
+  }
+
+}
+
+

@@ -1,0 +1,430 @@
+@import 'var';
+
+* {
+  // font-family: 'archia';
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+//@font-face {
+//   font-family: 'archia';
+//   src: url('../fonts/archia/Archia-Regular.woff') format('woff');
+// }
+
+.country-name,
+.district-name {
+  color: $red-color;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.spred-trend {
+  margin-left: 15px;
+
+  .spread {
+    color: $light-grey;
+  }
+
+  .state-selection {
+    padding: 25px 0;
+
+    .state-name {
+      background: $lg-blue;
+      background-position: calc(100% - 13px) 50%, calc(100% - 8px) 50%;
+      background-repeat: no-repeat;
+      background-size: 5px 5px,5px 5px;
+      border-color: $rgb-clr;
+    }
+  }
+}
+
+.covid-detail {
+  background-color: $bg-color;
+  padding: 5rem 0;
+}
+
+.confirmed {
+  color: $red-color;
+  height: 180px;
+  padding-top: 10px;
+
+  h5,
+  h4 {
+    font-weight: 800;
+  }
+
+  &:hover {
+    background-color: $bd-red;
+    border-radius: 5px;
+  }
+}
+
+.total-tested {
+  text-align: right;
+
+  h5 {
+    color: $prpl-light;
+  }
+}
+
+.is-confirm {
+  background-color: $bd-red;
+  border-radius: 5px;
+}
+
+.all-cases {
+  font-size: 20px;
+  margin-top: 0;
+
+  span {
+    font-size: 12px;
+  }
+}
+
+.confirm-add,
+.new-con {
+  color: $red-color;
+}
+
+.active-add {
+  color: $blue;
+}
+
+.active-case {
+  color: $blue;
+  height: 180px;
+  padding-top: 10px;
+
+  h5 {
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    font-weight: 800;
+  }
+
+  &:hover {
+    background-color: $activ-bg;
+    border-radius: 5px;
+  }
+}
+
+.is-active {
+  background-color: $activ-bg;
+  border-radius: 5px;
+}
+
+.is-recover {
+  background-color: $rec-bg;
+  border-radius: 5px;
+}
+
+.recover-add,
+.new-recv {
+  color: $green;
+}
+
+.recover {
+  color: $green;
+  height: 180px;
+  padding-top: 10px;
+
+  h5 {
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    font-weight: 800;
+  }
+
+  &:hover {
+    background-color: $rec-bg;
+    border-radius: 5px;
+  }
+}
+
+.is-death {
+  background-color: $death-bg;
+  border-radius: 5px;
+}
+
+.death-add,
+.last-updated {
+  color: $light-grey;
+}
+
+.deaths {
+  color: $light-grey;
+  height: 180px;
+  padding-top: 10px;
+
+  h5 {
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    font-weight: 800;
+  }
+
+  &:hover {
+    background-color: $death-bg;
+    border-radius: 5px;
+  }
+}
+
+.state-table {
+  overflow-x: auto;
+  width: 100%;
+
+  .statwise-data {
+    border: 1px solid $blck-clr;
+    color: $light-grey;
+
+    th {
+      background-color: $lg-blue;
+      border: 4px solid $bg-color;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 900;
+      padding: 1.25rem .5rem .75rem;
+      text-align: center;
+    }
+
+    .cell {
+      border: 4px solid $bg-color;
+      padding: 5px;
+
+      &:hover {
+        background-color: $lg-blue;
+      }
+    }
+
+    td:first-child {
+      background-color: $lg-blue;
+      font-weight: 800;
+    }
+  }
+}
+
+tr:nth-child(odd) {
+  td {
+    background-color: $lg-blue;
+  }
+}
+
+td a {
+  color: $light-grey;
+
+  &:hover {
+    color: $light-grey;
+  }
+
+}
+
+.total-tested,
+.new-test {
+  color: $purpl-lght;
+}
+
+.new-vaccine {
+  color: $new-vacci;
+}
+
+.confirmed-graph,
+.recovered-graph,
+.deceased-graph,
+.tested-graph,
+.vaccinated-graph {
+  margin-bottom: 20px;
+  overflow: auto;
+}
+
+.col-md-6.graph-section {
+  padding-left: 60px;
+}
+
+.level-vaccinated {
+  align-items: center;
+  align-self: center;
+  animation-delay: .2s;
+  background: $lvl-bg;
+  border-radius: 5px;
+  color: $level-clr;
+  display: flex;
+  flex-direction: row;
+  margin: 2.5rem 0;
+  padding: .5rem;
+
+  h5 {
+    width: 100%;
+  }
+}
+
+.delta-confirm .fa-heart,
+.delta-recvr .fa-heart,
+.delta-dth .fa-heart,
+.delta-test .fa-heart {
+  font-size: 9px;
+}
+
+.district {
+  color: $light-grey;
+  font-size: 18px;
+  line-height: 4rem;
+}
+
+.covid-footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  margin-top: 80px;
+  width: 100%;
+
+  h5 {
+    color: $light-grey;
+    font-weight: 600;
+    margin: 0 0 2rem;
+  }
+
+  a {
+    background: $bg-clr;
+    color: $blue;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background .2s ease-in-out;
+    word-wrap: break-word;
+  }
+}
+
+.pills {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  button {
+    background-color: $bg-btn;
+    border: 2px solid $bg-btn;
+    border-bottom: 0;
+    border-top: 0;
+    color: $orange;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 600;
+    margin: 0;
+    outline: none;
+    padding: 10px 15px;
+    text-align: center;
+    transition: background .25s ease-in-out;
+
+    .selected {
+      background: $select-clr;
+    }
+
+    &:last-of-type {
+      border: 0;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    &:first-of-type {
+      border: 0;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+  }
+
+}
+
+.focus-state,
+.all-cases {
+  font-weight: 800;
+}
+
+.state-meta {
+  align-self: center;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  width: calc(100% - 3rem);
+
+  .meta-item {
+    border-radius: 5px;
+    min-height: 6rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+
+  .confirmed {
+    background: $red-bg;
+
+    h5 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .active {
+    background: $bg-clr;
+    color: $clr-active;
+  }
+
+  .recovery {
+    background: $rec-bg;
+    color: $green;
+  }
+
+  .mortality {
+    background: $bg-bl;
+    color: $light-grey;
+  }
+
+  .gr {
+    background: $orng-clr;
+    color: $or-clr;
+  }
+
+  .tpm {
+    background: $bg-tpm;
+    color: $purpl-lght;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+}
+
+.state-focus {
+  margin-top: 35px;
+}
+
+.total-confirm h4,
+.total-active h4,
+.total-recover h4,
+.total-deceased h4,
+.total-tested h4 {
+  font-size: 23px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 767px) {
+  .col-md-6.graph-section {
+    padding-left: 20px;
+  }
+
+  .total-tested {
+    width: 100%;
+  }
+
+  .total-tested {
+    text-align: left;
+  }
+}
+

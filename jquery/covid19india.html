@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid19india</title>
+    <link rel="stylesheet" href="./css/covid.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid covid-detail">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <div class="row top-data">
+            </div>
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <div class="level-vaccinated">
+                  <h5><i class="fa fa-shield" aria-hidden="true"></i>  <span class="latst-vaccin"></span> vaccine doses administered</h5></div>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="state-table text-center">
+                  <table class="statwise-data sortable" id="stateTable">
+                    <thead id="thead">
+                      <tr>
+                        <th>State/UT</th>
+                        <th>Confirmed</th>
+                        <!-- <th>Active</th> -->
+                        <th>Recovered</th>
+                        <th>Deceased</th>
+                        <th>Tested</th>
+                        <th>Vaccine Doses Administered</th>
+                        <th>Other</th>
+                        <th>Active Ratio</th>
+                        <th>Recovery Ratio</th>
+                        <th>Case Fatality Ratio</th>
+                        <th>Test Positivity Ratio</th>
+                        <th>Population</th>
+                      </tr>
+                      </thead>
+                      <tbody id="tbody">
+                      </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 graph-section">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <h2 class="countryName country-name">India</h2>
+                <span class="last-updated"></span>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div id="total-tested" class="total-tested pull-right">
+                  <h5>Tested</h5>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="focus-Data">
+                  <h4 class="focus-state"></h1>
+                  <h3 class="all-cases"><div></div><span></span></h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="spred-trend">
+                <h2 class="spread text-center">Spread Trends</h2>
+                <div class="state-selection">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <select name="stateName" id="state-name" class="form-control state-name"></select>
+                    </div>
+                    <div class="col-md-4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row filter-tab">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/const.js"></script>
+    <script src="./js/bundle.js"></script>
+    <script src="./js/covid19india.js"></script>
+    <script src="./js/mustache.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/sortTable.js"></script>
+  </body>
+</html>

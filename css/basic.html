@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Basic Info</title>
+    <style>
+      table, th, td {
+        border-bottom: 1px solid grey;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 5px;
+        text-align: center;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background: #d4c9c9fa;
+      }
+      section:not(#form-sec) {
+        margin: 50px 0px;
+        text-align: center;
+      }
+      li {
+        /* float: left; */
+        display: inline;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+      }
+
+      li a {
+        display: inline-block;
+        padding: 14px 16px;
+        text-align: center;
+        text-decoration: none;
+      }
+      .blog {
+        color: blue;
+      }
+      .notice {
+        color: aqua;
+      }
+      /* #arti {
+        color: black;
+        font-size: 20px;
+      } */
+      #form-sec {
+        background-color: #c0c0c0;
+      }
+      #form-sec form  {
+        width: 50%;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <figure>
+        <a href="./index.html" target="_blank"><img src="./assets/img/logo.png" alt="logo image" width="100px" height="auto"></a>
+        <h4>My Blog Page</h4>
+      </figure>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#iframe">Iframe</a></li>
+        <li><a href="#tables">Table</a></li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#canvas">Canvas</a></li>
+        <li><a href="#entities">Html Entites</a></li>
+        <li><a href="#textformat">Text Formatting</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <section id="iframe">
+          <h2 class="notice blog" id="arti">Iframe</h2>
+          <div class="iframe-div">
+            <div class="iframe">
+              <iframe width="560px" height="315px" src="https://www.youtube.com/embed/RQkWvoES_uQ" frameborder="0" allow=" autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="iframe">
+              <iframe width="560px" height="315px" src="https://www.youtube.com/embed/RQkWvoES_uQ" frameborder="0" allow=" autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </section>
+        <hr>
+        <section id="tables" style="overflow-x:auto">
+          <h2>Table</h2>
+          <table style="width:100%">
+            <caption>Education Info</caption>
+            <tr>
+              <th colspan="2">College Name</th>
+              <th>CGPA</th>
+              <th>Branch</th>
+              <th>Course Duration(Year)</th>
+            </tr>
+            <tr>
+              <td>Global Institute of Technology, </td>
+              <td>Jaipur</td>
+              <td>73%</td>
+              <td>Electrical Enginnering</td>
+              <td>2013-2017</td>
+            </tr>
+            <tr>
+              <td>Global Institute of Technology, </td>
+              <td>Jaipur</td>
+              <td>73%</td>
+              <td>Electrical Enginnering</td>
+              <td>2013-2017</td>
+            </tr>
+            <tr>
+              <td>Global Institute of Technology, </td>
+              <td>Jaipur</td>
+              <td>73%</td>
+              <td>Electrical Enginnering</td>
+              <td>2013-2017</td>
+            </tr>
+          </table>
+        </section>
+        <hr>
+        <section id="form-sec">
+          <h2>Form</h2>
+          <form action="#" method="get">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br><br>
+            <label for="gender">Gender:</label>
+            <label for="male">male</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="female">female</label>
+            <input type="radio" id="female" name="gender" value="female"><br><br>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="2" cols="10"></textarea><br><br>
+            <input type="submit" value="Contact">
+          </form>
+        </section>
+        <hr>
+        <section id="canvas">
+          <h2>Canvas</h2>
+          <canvas width="300" height="150" style="border:1px solid #c0c0c0;">
+            browser does not support the HTML canvas tag.
+          </canvas>
+        </section>
+        <hr>
+        <section id="entities">
+          <h2>Entites</h2>
+          <p>non-breaking space("&nbsp;") &nbsp;, 1 &lt; 5  &amp;	, 5 &gt;	2	</p>
+          <div class="contain">
+            <div class="position-div1"></div>
+            <div class="position-div2"></div>
+            <div class="position-div3"></div>
+          </div>
+        </section>
+        <hr>
+        <section id="textformat">
+          <h2>Text Formatting</h2>
+          <p><b>Lorem ipsum</b> <strong>dolor</strong> <i>sit</i> <em>amet</em>, <mark>consectetur</mark> <small>adipisicing</small> <del>it</del> <ins>Lorem</ins>, <sup>ipsum</sup>, <sub>Lorem</sub></p>
+        <div class="select-div">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        </section>
+        <section id="image">
+            <img src="./assets/img/trending/trending_top.jpg" alt="">
+            <button>APPITIZERS</button>
+            <h3>Welcome to the best model winner contest at look of the year</h3>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <p style="text-align:center;margin-bottom:60px">&copy; Basic Info 2021</p>
+      <div class="chat-icon">
+        Connect with us
+      </div>
+    </footer>
+  </body>
+</html>

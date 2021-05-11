@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice-index</title>
+</head>
+<body onload="checkCookies()"> 
+    <div class="container" style="padding: 10px 30px;">
+        <p id="demo">Hii, this is paragraph.</p>
+        <p id="write-demo"></p>
+        <button onclick="document.getElementById('demo').innerHTML += 'Hello Javascript!!'">Hello Javascript</button>
+        <button onclick="document.getElementById('demo').style.fontSize='35px'">Hello Javascript</button>
+        <p id="loop"></p>
+        <p id="for"></p>
+        <p id="switch"></p>
+        <p id="fun"></p>
+        <p id="fun-list"></p>
+        <div id="main">
+            <p class="intro">The DOM is very useful.</p>
+            <p class="intro">This example demonstrates the <b>getElementsByTagName</b> method.</p>
+        </div>
+        <p id="element-div"></p>
+        <p id="test"></p>
+        <img id="image" src="smiley.gif" alt="" width="160" height="120"><br>
+        <button type="button" onclick="document.getElementById('demo').style.color = 'red'"> click me</button>
+        <button onclick="changeText(this)">Click on this text!</button>
+        <p id="cooke"></p><br>
+        <input type="text" id="fname" onchange="upperCaseFun()"><br>
+
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)" onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="background-color:#66d938;width:120px;height:10px;padding:20px;">
+        Mouse Over Me</div><br>
+        <button id="myBtn">Click</button><br>
+        <p id="text"></p><br>
+        <p id="resize"></p><br>
+        <!-- <button onclick="removeHandler()"> removehandler</button> -->
+
+        <form name="myForm" action="#" onsubmit="return validateForm()" method="post">
+            Name: <input type="text" name="fname" id="fname">
+            <input type="submit" value="Submit">
+        </form>
+
+        <input id="id1" type="number" min="100" max="300" required>
+        <button onclick="myInput()">OK</button> <br>
+
+        <button onclick="clearVar = setInterval(deleteFunction, 5000)">Delete</button>
+        <p id = "delete"></p>
+        <button onclick="clearInterval(clearVar)">clear interval</button>
+
+        <button onclick="setTimeout(promptFunction, 2000)">Prompt</button>
+        <p id="promt"></p>
+
+
+<script src="./js/practice.js"></script>
+</body>
+</html>
